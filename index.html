@@ -1,188 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d18">
-<title>YOUSEF | Web Developer</title>
+<title>RORO STORE | تفاصيل فرحتك</title>
+<meta name="theme-color" content="#f8e9ed">
 
 <style>
-*{
- margin:0;
- padding:0;
- box-sizing:border-box;
- font-family:Tahoma,Arial,sans-serif;
-}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
- background:#080d18;
- color:white;
- line-height:1.8;
+font-family:Tahoma,Arial,sans-serif;
+background:#fff8fa;color:#49333b;
 }
 header{
- padding:20px 8%;
- display:flex;
- justify-content:space-between;
- align-items:center;
- background:#101a2b;
- border-bottom:1px solid #26334a;
- position:sticky;
- top:0;
- z-index:10;
+background:#fff;
+padding:18px 6%;
+display:flex;justify-content:space-between;
+align-items:center;box-shadow:0 3px 15px #0000000c;
+position:sticky;top:0;z-index:10;
 }
-.logo{
- color:#38bdf8;
- font-size:25px;
- font-weight:bold;
-}
-header a{
- color:white;
- text-decoration:none;
-}
+.logo{font-size:25px;font-weight:bold;color:#b76e82}
+.logo span{color:#c49a53}
+header a{color:#a65d73;text-decoration:none;font-weight:bold}
 .hero{
- min-height:75vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- padding:60px 20px;
- background:
- radial-gradient(circle at top,#123c62,transparent 65%),
- #080d18;
+min-height:440px;padding:75px 20px;
+text-align:center;display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+background:linear-gradient(135deg,#f8dce5,#fff4ee,#f2dce6);
 }
-.hero h1{
- font-size:clamp(35px,7vw,60px);
- margin-bottom:15px;
+.hero h1{font-size:42px;color:#9e536b;margin-bottom:15px}
+.hero p{font-size:17px;line-height:2}
+.main-btn{
+display:inline-block;margin-top:25px;padding:14px 35px;
+background:#a95d76;color:white;border-radius:30px;
+text-decoration:none;border:none;font-size:16px;
+cursor:pointer;
 }
-.hero h1 span{color:#38bdf8}
-.hero p{
- color:#cbd5e1;
- max-width:600px;
- font-size:18px;
- margin-bottom:28px;
+section{padding:55px 6%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{color:#a95d76;font-size:29px}
+.heading p{margin-top:10px;color:#927d83}
+.products{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
 }
-.btn{
- display:inline-block;
- padding:13px 27px;
- margin:7px;
- border-radius:10px;
- background:#0284c7;
- color:white;
- text-decoration:none;
- font-weight:bold;
- border:0;
- cursor:pointer;
- transition:.3s;
+.card{
+background:white;border-radius:18px;overflow:hidden;
+box-shadow:0 5px 20px #9b647015;
+transition:.3s;
 }
-.btn:hover{
- background:#0369a1;
- transform:translateY(-3px);
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:230px;object-fit:cover}
+.info{padding:18px}
+.info h3{font-size:19px;margin-bottom:10px}
+.price{color:#b36b80;font-weight:bold;font-size:18px}
+.info button{
+width:100%;margin-top:15px;padding:12px;
+border:0;border-radius:10px;background:#b76e82;
+color:white;font-size:15px;cursor:pointer;
 }
-.secondary{
- background:transparent;
- border:1px solid #38bdf8;
-}
-section{
- padding:65px 8%;
- text-align:center;
-}
-section h2{
- color:#38bdf8;
- font-size:30px;
- margin-bottom:25px;
-}
-.about p{
- max-width:750px;
- margin:auto;
- color:#cbd5e1;
- font-size:18px;
-}
-.services{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:20px;
-}
-.service{
- background:#111d30;
- padding:28px 20px;
- border:1px solid #263b55;
- border-radius:15px;
- transition:.3s;
-}
-.service:hover{
- transform:translateY(-5px);
- border-color:#38bdf8;
-}
-.service h3{
- color:#38bdf8;
- margin-bottom:10px;
-}
-.service p{color:#cbd5e1}
-.order{
- background:#101a2b;
-}
-.order-intro{
- color:#cbd5e1;
- margin-bottom:30px;
-}
-.order-form{
- max-width:650px;
- margin:auto;
- background:#111d30;
- border:1px solid #263b55;
- padding:30px;
- border-radius:18px;
- text-align:right;
-}
-.field{margin-bottom:18px}
-.field label{
- display:block;
- margin-bottom:8px;
- color:#dbeafe;
- font-weight:bold;
-}
-.field input,.field select,.field textarea{
- width:100%;
- padding:14px;
- border-radius:9px;
- border:1px solid #334b67;
- background:#080d18;
- color:white;
- outline:none;
- font-size:15px;
-}
-.field input:focus,.field select:focus,
-.field textarea:focus{
- border-color:#38bdf8;
-}
-.field textarea{
- min-height:120px;
- resize:vertical;
-}
-.order-form button{
- width:100%;
- font-size:17px;
-}
-.contact{
- background:#080d18;
-}
-.contact p{
- color:#cbd5e1;
- margin-bottom:15px;
+.about{
+background:#f8e9ed;text-align:center;
+line-height:2.2;
 }
 footer{
- text-align:center;
- padding:22px;
- color:#94a3b8;
- font-size:14px;
- border-top:1px solid #26334a;
+background:#503641;color:white;text-align:center;
+padding:30px 15px;line-height:2.2;
 }
-@media(max-width:600px){
- header{padding:16px 5%}
- section{padding:50px 5%}
- .order-form{padding:20px}
+.cart{
+position:fixed;bottom:20px;left:20px;
+background:#a95d76;color:white;
+border:0;border-radius:50px;padding:15px 22px;
+font-size:16px;z-index:20;cursor:pointer;
+box-shadow:0 5px 20px #0003;
 }
 </style>
 </head>
@@ -190,165 +80,118 @@ footer{
 <body>
 
 <header>
- <div class="logo">YOUSEF</div>
- <a href="#order" class="btn">اطلب موقعك</a>
+<div class="logo">RORO <span>STORE</span></div>
+<a href="#products">تسوق الآن</a>
 </header>
 
-<main>
-
 <div class="hero">
- <h1>أهلاً بك، أنا <span>يوسف</span></h1>
- <p>
- أتعلم تصميم وتطوير مواقع الويب،
- وأسعى لتحويل أفكارك إلى مواقع إلكترونية
- عصرية واحترافية تناسب مشروعك.
- </p>
- <div>
-  <a href="#services" class="btn">خدماتي</a>
-  <a href="#order" class="btn secondary">اطلب موقعك الآن</a>
- </div>
+<h1>RORO STORE</h1>
+<p>كل تفاصيل فرحتك في مكان واحد ❤️<br>
+مرايات كتب الكتاب، الورد، الهدايا وكل ما يميز مناسبتك.</p>
+<a href="#products" class="main-btn">اكتشف منتجاتنا</a>
 </div>
 
+<section id="products">
+<div class="heading">
+<h2>منتجاتنا المميزة</h2>
+<p>اختاري تفاصيل فرحتك من مجموعتنا</p>
+</div>
+
+<div class="products" id="productList"></div>
+</section>
+
 <section class="about">
- <h2>من أنا؟</h2>
- <p>
- أنا يوسف، مهتم بالبرمجة وتصميم مواقع الويب.
- أعمل على تطوير مهاراتي في HTML وCSS وJavaScript،
- وأحب صناعة مواقع بسيطة وجميلة تساعد أصحاب
- المشاريع والمحلات والمطاعم على الظهور عبر الإنترنت.
- </p>
+<div class="heading">
+<h2>عن RORO STORE</h2>
+</div>
+<p>
+نهتم بأجمل تفاصيل المناسبات والهدايا.
+هدفنا نخلي كل لحظة مميزة وتفضل ذكرى جميلة ❤️
+</p>
 </section>
-
-<section id="services">
- <h2>ماذا أقدم؟</h2>
- <div class="services">
-
-  <div class="service">
-   <h3>تصميم مواقع</h3>
-   <p>تصميم صفحات ويب عصرية ومتجاوبة مع جميع الأجهزة.</p>
-  </div>
-
-  <div class="service">
-   <h3>مواقع المطاعم</h3>
-   <p>مواقع لعرض قوائم الطعام والأسعار وطرق التواصل.</p>
-  </div>
-
-  <div class="service">
-   <h3>مواقع المحلات</h3>
-   <p>صفحات احترافية لعرض المنتجات والخدمات.</p>
-  </div>
-
- </div>
-</section>
-
-<section id="order" class="order">
- <h2>اطلب تصميم موقعك</h2>
- <p class="order-intro">
- املأ البيانات التالية وسأستقبل طلبك عبر واتساب.
- </p>
-
- <form class="order-form" id="orderForm">
-
-  <div class="field">
-   <label for="name">اسمك</label>
-   <input id="name" type="text"
-   placeholder="اكتب اسمك" required>
-  </div>
-
-  <div class="field">
-   <label for="phone">رقم واتسابك</label>
-   <input id="phone" type="tel"
-   placeholder="مثال: 01012345678" required>
-  </div>
-
-  <div class="field">
-   <label for="type">نوع الموقع المطلوب</label>
-   <select id="type" required>
-    <option value="">اختر نوع الموقع</option>
-    <option>موقع مطعم</option>
-    <option>موقع محل</option>
-    <option>موقع شركة</option>
-    <option>موقع شخصي</option>
-    <option>متجر إلكتروني</option>
-    <option>نوع آخر</option>
-   </select>
-  </div>
-
-  <div class="field">
-   <label for="budget">الميزانية المتوقعة</label>
-   <select id="budget" required>
-    <option value="">اختر الميزانية</option>
-    <option>أقل من 1000 جنيه</option>
-    <option>من 1000 إلى 3000 جنيه</option>
-    <option>من 3000 إلى 5000 جنيه</option>
-    <option>أكثر من 5000 جنيه</option>
-    <option>أحتاج إلى استشارة أولاً</option>
-   </select>
-  </div>
-
-  <div class="field">
-   <label for="details">تفاصيل المشروع</label>
-   <textarea id="details"
-   placeholder="اشرح لي فكرتك والمميزات التي تريدها..."
-   required></textarea>
-  </div>
-
-  <button type="submit" class="btn">
-   إرسال الطلب عبر واتساب
-  </button>
-
- </form>
-</section>
-
-<section id="contact" class="contact">
- <h2>تواصل معي</h2>
- <p>يسعدني التعرف على فكرتك ومناقشة تفاصيل مشروعك.</p>
- <a class="btn"
- href="https://wa.me/201120527725"
- target="_blank" rel="noopener">
- تواصل معي مباشرة
- </a>
- <a class="btn secondary" href="tel:01120527725">
- اتصل بي
- </a>
-</section>
-
-</main>
 
 <footer>
- © 2026 جميع الحقوق محفوظة | تصميم يوسف
+<h2>RORO STORE</h2>
+<p>تفاصيل فرحتك تبدأ من هنا ❤️</p>
+<p>للطلب والاستفسار تواصلوا معنا عبر واتساب</p>
 </footer>
 
+<button class="cart" onclick="checkout()">
+🛒 السلة (<span id="count">0</span>)
+</button>
+
 <script>
-document.getElementById("orderForm")
-.addEventListener("submit",function(e){
+const WHATSAPP_NUMBER = "ضع_رقم_واتساب_هنا";
 
- e.preventDefault();
+const products = [
+{
+name:"مراية كتب الكتاب",
+price:"يحدد حسب الطلب",
+image:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=700"
+},
+{
+name:"بوكيه ورد",
+price:"يحدد حسب الطلب",
+image:"https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700"
+},
+{
+name:"هدايا العرائس",
+price:"يحدد حسب الطلب",
+image:"https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=700"
+},
+{
+name:"بوكس هدايا فاخر",
+price:"يحدد حسب الطلب",
+image:"https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=700"
+}
+];
 
- const name=document.getElementById("name").value.trim();
- const phone=document.getElementById("phone").value.trim();
- const type=document.getElementById("type").value;
- const budget=document.getElementById("budget").value;
- const details=document.getElementById("details").value.trim();
+let cart=[];
 
- if(!name || !phone || !type || !budget || !details){
-  alert("من فضلك أكمل جميع البيانات");
-  return;
- }
+function render(){
+document.getElementById("productList").innerHTML=
+products.map((p,i)=>`
+<div class="card">
+<img src="${p.image}" alt="${p.name}">
+<div class="info">
+<h3>${p.name}</h3>
+<div class="price">${p.price}</div>
+<button onclick="add(${i})">أضف إلى السلة</button>
+</div>
+</div>
+`).join("");
+}
 
- const message=
- "طلب تصميم موقع جديد\n\n"+
- "اسم العميل: "+name+"\n"+
- "رقم العميل: "+phone+"\n"+
- "نوع الموقع: "+type+"\n"+
- "الميزانية: "+budget+"\n"+
- "تفاصيل المشروع: "+details;
+function add(i){
+cart.push(products[i]);
+document.getElementById("count").textContent=cart.length;
+alert("تمت إضافة المنتج إلى السلة ❤️");
+}
 
- const url="https://wa.me/201120527725?text="+
- encodeURIComponent(message);
+function checkout(){
+if(!cart.length){
+alert("السلة فارغة، اختار منتجات الأول ❤️");
+return;
+}
 
- window.open(url,"_blank");
+if(!/^\d{10,15}$/.test(WHATSAPP_NUMBER)){
+alert("يجب إضافة رقم واتساب المتجر داخل الكود أولاً.");
+return;
+}
+
+let message="مرحباً RORO STORE ❤️ أريد الاستفسار عن المنتجات التالية:\n\n";
+cart.forEach((p,i)=>{
+message+=(i+1)+"- "+p.name+"\n";
 });
+message+="\nمن فضلكم أرسلوا لي الأسعار والتفاصيل.";
+
+window.open(
+"https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),
+"_blank"
+);
+}
+
+render();
 </script>
 
 </body>
